@@ -1,30 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FASE 2 Nelson Lopez</title>
+    <style>
+        header{
+            background-color: aqua;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+    </style>
 </head>
-<style>
-    *{
-        text-align: center;
-        background-color: blueviolet;
-        color: white;
-    }
-</style>
+
 <body>
-    <h1> Bienvenido a mi Sitio Web</h1>
-    <h2> Proyecto de Sitio Web año 2023 - 301122</h2>
+    <header>
+        <center><h1>CSS GRID</h1></center>
+    
+    <nav>
+        <h2>
+            <ul>
+                <li> <a href="#Definicion"> Definición </a> </li>
+                <li> <a href="#Ventajas"> Ventajas </a> </li>
+                <li> <a href="#Primeros"> Primeros Pasos </a> </li>
+                <li> <a href="#Muckup"> Muckup de la Página </a> </li>
+                <li> <a href="#Acerca"> Acerca de.. </a> </li>
+            </ul>
+        </h2>
+    </nav>
+    </header>
+    <center><img src="img/css grid.jpg" alt=""></center>
+    <a name="Definicion"></a>
     <hr>
-    <h3> Nombre: Nelson Adrian Lopez Gamboa </h3>
-    <h3> Programa: Ingenieria de Sistemas </h3>
-    <h3> Fecha de Creacion: 19/02/2023 </h3>
+    <section>
+        
+        <center><h2>¿Qué es CSS Grid?</h2></center>
+        <p>
+            CSS Grid es un sistema de maquetación web que divide la página en una cuadrícula o rejilla (grid) a partir
+            de la cual se pueden posicionar los diferentes elementos de manera más sencilla, versátil y coherente.
+            Su practicidad y sus múltiples ventajas lo han convertido en un estándar. Es decir, casi cualquier navegador
+            soporta e interpreta este tipo de código.
+            La irrupción de CSS Grid, junto con Flexbox, supuso una revolución en el mundo de la programación web, ya
+            que permitía realizar con mucho menos código elementos y estructuras que resultaban muy complejas o
+            directamente imposibles.
+
+        </p>
+    </section>
     <hr>
-    <p> Mis Datos de Contacto Son:<br>
-        skype: nelson.8710@hotmail.com <br>
-        Telefono: 3142318181 <br>
-        email: nalopezg@unadvirtual.edu.co<br>
-    </p>
+    <a name="Ventajas"></a>
+    <section>
+        <center><h2>Ventajas de CSS Grid:</h2></center>
+        <ul>
+            <li>
+                Mucha más flexibilidad: te permite controlar los elementos en las 2 dimensiones y con total libertad.
+            </li>
+            <li>Menos código y menos bugs: se reduce considerablemente el código empleado, lo que conlleva revisiones
+                más
+                sencillas y menor probabilidad de bugs.
+            </li>
+            <li>
+                Optimización de recursos: al ser código más simple y consistente se economiza tanto en tiempo como en
+                recursos necesarios para mostrar la página.
+            </li>
+            <li>
+                Responsive más sencillo: permite crear elementos dinámicos que se adaptan a diferentes tamaños o
+                resoluciones sin complicaciones.
+            </li>
+        </ul>
+    </section>
+    <hr>
+    <a name="Primeros"></a>
+    <section>
+        <center><h2>Primeros Pasos</h2></center>
+        <p>El funcionamiento de CSS Grid en 4 sencillos pasos.</p>
+        <ol>
+            <li>
+                <h3>Crea un bloque contenedor</h3>
+            </li>
+            <p>Para alojar los elementos que quieras colocar es necesario crear un bloque contenedor, como, por ejemplo:
+            </p>
+            <img src="img/ejemplo1.jpg" alt="">
+            <li>
+                <h3>Activa CSS Grid</h3>
+            </li>
+            <p>Para que Grid comience a funcionar debes activarlo mediante la propiedad display: grid.</p>
+            <img src="img/ejemplo2.jpg" alt="">
+            <li>
+                <h3>Define tu rejilla</h3>
+            </li>
+            <p>Una vez esté activo, toca definir la rejilla mediante las siguientes propiedades: grid-template-rows,
+                grid-template-columns y/o grid-template-areas.
+                Por ejemplo, si queremos hacer este esquema:
+            </p>
+            <img src="img/ejemplo3.jpg" alt="">
+            <p>Utilizaremos el siguiente código:</p>
+            <img src="img/ejemplo4.jpg" alt="">
+            <p>Puedes definir tus elementos utilizando diferentes unidades fijas como los píxeles, o utilizar la unidad
+                propia del sistema Grid: los fr.</p>
+            <p>
+            <h4>La unidad fr indica la fracción del espacio restante que ocupará un elemento.</h4>
+            </p>
+            <p>Por ejemplo, si tienes 3 columnas y le asignas un valor 1fr a cada una, esto repartirá el espacio a
+                partes iguales entre las 3. Si en cambio, le das el valor 2fr a una de ellas, esa ocupará el doble de
+                espacio que las otras.
+                El espaciado entre items puedes marcarlo con grid-row-gap y grid-column-gap, o bien definirlo
+                previamente en tu grid como si fueran una columna/fila más.</p>
+            <li>
+                <h3>Colocar los elementos en la rejilla</h3>
+            </li>
+            <p>
+            <h4>Si no marcas la posición de los elementos estos se colocarán por defecto de izquierda a derecha y de
+                arriba abajo.</h4>
+            </p>
+            <p>Si quieres personalizar la ubicación de los ítems puedes indicarle donde quieres que vaya cada uno tal
+                que así:</p>
+            <img src="img/ejemplo5.jpg" alt="">
+            <img src="img/ejemplo6.jpg" alt="">
+            <p>Otro modo acortado sería utilizando grid-row: X / Y o grid-column: X / Y. Siendo X el número de fila o
+                columna inicial e Y el número de fila o columna final.</p>
+            <img src="img/ejemplo7.jpg" alt="">
+            <img src="img/ejemplo8.jpg" alt="">
+            <p>De esta forma puedes repartir los elementos a tu gusto, incluso variando el espacio que ocupa cada uno
+                para hacerlo más dinámico.
+                Con CSS Grid ahorrarás tiempo picando código y tus diseños web serán más flexibles y funcionales.
+            </p>
+        </ol>
+    </section>
+    <hr>
+    <a name="Muckup"></a>
+    <section>
+        <Center><h2>Mockup de la Página</h2>
+        <img src="img/Muckup.jpg" alt=""></Center>
+    </section>
+    <hr>
+    <a name="Acerca"></a>
+    <section>
+        <Center><h2>Acerca de..</h2>
+        <ul>
+            <p>Nombre: Nelson Adrian Lopez Gamboa</p>
+            <p>Mail: nalopezg@unadvirtual.edu.co</p>
+            <p>Curso: Diseño de Sitios Web 301122</p>
+            <p>Telefono: 3142318181</p>
+        </ul>
+        </Center>
+    </section>
+    <hr>
+    <footer>
+        <center>
+        <p>Esta pagina fue Desarrollada por Nelson Adrian Lopez Gamboa 21/03/2023</p>
+        <p>Informacion extraida de https://dinahosting.com</p>
+        </center>
+    </footer>
 </body>
+
 </html>
